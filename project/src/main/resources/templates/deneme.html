@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Spring boot index page example</title>
+
+  <style>
+    div{
+       text-align: center;
+        width: 300px;
+        height: 500px;
+        background-color: cornflowerblue;
+        margin: auto;
+        padding: 10px;
+        display: table;
+    }
+    input{
+     text-align: center;
+
+        margin: auto;
+        padding: 10px;
+
+    }
+
+
+</style>
+</head>
+<body>
+<div class="container-fluid">
+
+  <h1>YAZLAB</h1>
+  <form action="/ekle" method="post">
+
+    <input type="text" name="metinbir"/> <br/>
+    <br/> <br/>
+
+    <input type="text" name="metiniki"/> <br/>
+
+    <br/> <br/> <br/> <br/> <br/>
+
+
+    <button type="submit">Ekle</button>
+
+  </form>
+  <br/>
+
+  <form action="/birlestir" method="post">
+
+    <button type="submit">Birleştir</button>
+
+  </form>
+  <br/>
+
+  <form action="/kaydet" method="post">
+
+    <button type="submit">Kaydet</button>
+
+  </form>
+
+
+
+  <p th:text="${user.metinuc}"> </p>
+  <p th:text="${user.sure}"> </p>
+
+
+
+</div>
+
+</body>
+
+</html>
